@@ -18,7 +18,7 @@ const DetailScreen = () => {
 			<div className='w-full h-[64px] flex items-center bg-[#F4F4F5] px-36 font-light text-[#5D5F5F]'>
 				<Link href='/'>
 					<a>
-						Home {'>'} {currentProduct.title}
+						Home {'>'} {currentProduct?.title}
 					</a>
 				</Link>
 			</div>
@@ -27,26 +27,26 @@ const DetailScreen = () => {
 				{/* images section */}
 				<div className='w-[700px] grid grid-cols-2 gap-10 relative'>
 					<Image
-						src={currentProduct.images_urls[0]}
+						src={currentProduct?.images_urls[0]}
 						width={200}
 						height={200}
 						objectFit='contain'
 					/>
 					<Image
-						src={currentProduct.images_urls[1]}
+						src={currentProduct?.images_urls[1]}
 						width={200}
 						height={200}
 						objectFit='contain'
 					/>
 					<Image
-						src={currentProduct.images_urls[1]}
+						src={currentProduct?.images_urls[1]}
 						width={200}
 						height={200}
 						objectFit='contain'
 					/>
 
 					<Image
-						src={currentProduct.images_urls[0]}
+						src={currentProduct?.images_urls[0]}
 						width={200}
 						height={200}
 						objectFit='contain'
@@ -55,18 +55,18 @@ const DetailScreen = () => {
 				{/* detail section */}
 				<div className='h-full mt-20'>
 					<p className='text-[#1D1F1F] font-light text-xl'>
-						{currentProduct.title}
+						{currentProduct?.title}
 					</p>
 					<div className='flex items-center gap-5 py-5'>
 						<p className='text-[#DE5212] text-4xl font-medium'>
-							${currentProduct.price}
+							${currentProduct?.price}
 						</p>
 						<p className='text-[#B6B8B8] text-xl font-extralight line-through'>
 							$69.12
 						</p>
 					</div>
 					<p className='text-[#71767C] max-w-[500px] text-sm'>
-						{currentProduct.description}
+						{currentProduct?.description}
 					</p>
 					<div className='flex items-center gap-5 py-10'>
 						<div className='w-16 h-16 rounded-full flex flex-col justify-center items-center bg-[#1D1F1F]'>
